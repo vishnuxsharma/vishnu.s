@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>SowadK</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="style.css">
+<script src="website.js"></script>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-light-grey w3-animate-opacity w3-text-black w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+  <h3 class="w3-padding-64 w3-center"><b>SOWAD<br>KHAN</b></h3>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a> 
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a> 
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">SOWAD KHAN</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Push down content on small screens --> 
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Photo grid -->
+  <div class="w3-row">
+    <div class="w3-third">
+      <div class="zoom"><img src="images/Pool.jpg" style="width:100%" onclick="onClick(this)" alt="Resort in Galveston, Texas"></div>
+      <div class="zoom"><img src="images/Shore.jpg" style="width:100%" onclick="onClick(this)" alt="What a beautiful scenery this is!"></div>
+      <div class="zoom"><img src="images/Group.jpg" style="width:100%" onclick="onClick(this)" alt="Hanging out with my friends"></div>
+    </div>
+
+    <div class="w3-third">
+      <div class="zoom"><img src="images/Rock.jpg" style="width:100%" onclick="onClick(this)" alt="Quiet day at the beach. Cold, but beautiful"></div>
+      <div class="zoom"><img src="images/Portrait.jpg" style="width:100%" onclick="onClick(this)" alt="Me in UW's E7 Building!"></div>
+      <div class="zoom"><img src="images/Plane.JPG" style="width:100%" onclick="onClick(this)" alt="The NASA center at Houston, Texas!"></div>
+    </div>
+    
+    <div class="w3-third">
+      <div class="zoom"><img src="images/Parasailing.jpg" style="width:100%" onclick="onClick(this)" alt="Parasailing with my dad in Cancun, Mexico!"></div>
+      <div class="zoom"><img src="images/Bridge.jpg" style="width:100%" onclick="onClick(this)" alt="What a beautiful bridge in Sarnia!"></div>
+      <div class="zoom"><img src="images/Fountain.jpg" style="width:100%" onclick="onClick(this)" alt="Toronto Centre Island!"></div>
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-gray" style="padding-top:0" onclick="this.style.display='none'">
+    <button class="w3-button w3-teal w3-xlarge w3-display-topright">×</button>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- About section -->
+  <div class="w3-container w3-dark-gray w3-center w3-text-light-grey w3-padding-32" id="about">
+    <div class="about w3-half">
+      <img src="images/Wad.JPG" alt="Me" class="w3-image w3-padding-25" width="375" height="400">
+    </div>
+    <div class="w3-half" style="max-width:600px">
+      <div class="about"><h2>Hey, I'm Sowad!</h2></div>
+      <p>
+     As you can see above, I love basketball, science, and entrepreneurship. I am currently a student attending Kitchener Waterloo Collegiate And Vocational School and
+        I am in the ninth grade. I have always had an interest in the sciences and space, as a child my dream was to become an astronaut and it still is and this led me to pave
+        my own path into learning about the sciences outside of school. I am a member of Refill a business for snack delivery and a member of the flowboat entrepreneurship club.
+        <br><br>In my free time I love to play basketball (huge warriors fan) and work out, I love sports in general but mostly basketball and boxing, I also love to spend time
+        with family and friends and long drives. Hopefully that helped you learn a bit more about me!
+      </p>
+    </div>
+  
+        <div class="w3-quarter w3-padding-16">
+          <div class="w3-card-4 w3-hover-red" style="width:90%">
+            <a href="https://www.flowboat.ca/">
+              <img src="images/flowboat_presentationLogo.png" alt="Flowboat" class="w3-center" style="width:90%">
+            </a>
+            <div class="w3-container w3-center">
+              <p>Flowboat Startup Accelerator, Administration Manager</p>
+            </div>
+          </div>
+        </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey" id="contact">  
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3 class="w3-center">CONTACT ME</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16 w3-hover-black">
+            <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to&su">
+              <img src="images/gmail.png" class="w3-left w3-margin-right" style="width:50px">
+            </a>
+            <span class="w3-large">Email</span><br>
+            <span>vishnushar06@gmail.com</span>
+          </li>
+
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="images/phone.png" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Phone</span><br>
+            <span>226-507-2249</span>
+          </li> 
+        </ul> 
+      </div>
+    
+      <div class="w3-third">
+        <h3 class="w3-center">VISIT MY SOCIAL MEDIA</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16 w3-hover-black">
+            <a href="https://www.instagram.com/vishnuxsharma/?hl=en">
+              <img src="images/instagram.png" class="w3-left w3-margin-right" style="width:50px">
+            </a>
+            <span class="w3-large">Instagram</span><br>
+            <span>Follow me!</span>
+          </li>
+
+          <li class="w3-padding-16 w3-hover-black">
+            <a href="https://www.linkedin.com/in/vishnu-sharma-7834a11b4/trk=people-guest_people_search-card">
+              <img src="images/linkedin.png" class="w3-left w3-margin-right" style="width:50px">
+            </a>
+            <span class="w3-large">Linkedin</span><br>
+            <span>Connect with me!</span>
+          </li> 
+        </ul>
+      </div>
+
+      <div class="w3-third">
+
+    </div>
+
+    <div class="w3-container">
+      <hr class="w3-opacity">
+      <h5><script type="text/javascript" src="website.js"></script></h5>
+    </div>
+  </footer>
+
+</body>
+</html>
